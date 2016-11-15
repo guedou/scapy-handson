@@ -1,6 +1,6 @@
 # Manipulating packets
 
-This trophy gives yoy the opportunity to perfom simple Scapy packets manipulation.
+This trophy gives you the opportunity to perform simple Scapy packets manipulation.
 
 ## Tasks
 
@@ -15,7 +15,7 @@ This trophy gives yoy the opportunity to perfom simple Scapy packets manipulatio
 
 **task #2**
 
-- create an implicit packet that builds 5 explicit packets with 5 differents TTL values
+- create an implicit packet that builds 5 explicit packets with 5 deferents TTL values
 - iterate over this packets
 
 ## Hints

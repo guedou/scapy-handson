@@ -11,4 +11,4 @@ Solutions to each trophy will be provided every **5 minutes** during the worskho
 
 ## Trophies
 
-- :trophy: #1 - Manipulating packets
+- :trophy: #1 - [Manipulating packets](trophies/manipulating_packets.md)

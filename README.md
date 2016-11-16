@@ -14,3 +14,4 @@ Solutions to each trophy will be provided every **5 minutes** during the worskho
 - :trophy: #1 - [Manipulating packets](trophies/manipulating_packets.md)
 - :trophy: #2 - [Network interactions](trophies/network_interactions.md)
 - :trophy: #? - [Fun with X.509 certificates](trophies/fun_with_x509.md)
+- :trophy: #? - [Intercepting and modifying packets](trophies/intercepting_and_modifying.md)

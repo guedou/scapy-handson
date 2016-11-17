@@ -11,11 +11,12 @@ Solutions to each trophy will be provided every **5 minutes** during the worskho
 
 ## Trophies
 
-- :trophy: #1 - [Manipulating packets](trophies/manipulating_packets.md)
-- :trophy: #2 - [Network interactions](trophies/network_interactions.md)
-- :trophy: #? - [Intercepting and modifying packets](trophies/intercepting_and_modifying.md)
-- :trophy: #? - [IPv6 reconnaissance](trophies/ipv6_reconnaissance.md)
-- :trophy: #? - [Fun with X.509 certificates](trophies/fun_with_x509.md)
-- :trophy: #? - [Playing with TLS](trophies/playing_with_tls.md)
-- :trophy: #? - [Adding a new protocol](trophies/new_protocol.md)
-- :trophy: #? - [Answering machines](trophies/answering_machines.md)  
+- :trophy: #1 - [Manipulating Packets](trophies/manipulating_packets.md)
+- :trophy: #2 - [Network Interactions](trophies/network_interactions.md)
+- :trophy: #3 - [Intercepting And Modifying Packets](trophies/intercepting_and_modifying.md)
+- :trophy: #4 - [IPv6 Reconnaissance](trophies/ipv6_reconnaissance.md)
+- :trophy: #5 - [Fun With X.509 Certificates](trophies/fun_with_x509.md)
+- :trophy: #6 - [Playing With TLS](trophies/playing_with_tls.md)
+- :trophy: #7 - [Adding a New Protocol](trophies/new_protocol.md)
+- :trophy: #8 - [Answering Machines](trophies/answering_machines.md)  
+- :trophy: #9 - [Pipes Introduction](trophies/pipes_introduction.md)  

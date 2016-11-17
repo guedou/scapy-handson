@@ -10,7 +10,7 @@ our own protocol.
 **task #1**
 
 - choose a builtin AnsweringMachine, and launch it (farpd is easy)
-- trigger it by sendig a packet with Scapy (arping helps)
+- trigger it by sending a packet with Scapy (arping helps)
 
 **task #2**
 

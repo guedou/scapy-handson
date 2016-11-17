@@ -19,7 +19,7 @@ This trophy shows you some cool things that you can do.
 - edit the `tls_trophy.py` template
 - send a ClientHello
 - parse the received data with the `TLS` class
-- can you get the two ertificates sent by the server ?
+- can you get the two certificates sent by the server ?
 
 ## Hints
 

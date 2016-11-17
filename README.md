@@ -6,7 +6,7 @@ Scapy (http://www.secdev.org/projects/scapy, https://github.com/secdev/scapy & h
 
 Each of them is different and gives you the opportunity to enhance your Scapy skills by manipulating yourself and watching a potential solution.
 
-Solutions to each trophy will be provided every **5 minutes** during the worskhop.
+Solutions to each trophy will be provided every **5 minutes** during the workshop.
 
 
 ## Trophies

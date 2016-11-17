@@ -1,4 +1,4 @@
-# Scapy hands-on at #GreHack16
+# Scapy Hands-on at #GreHack16
 
 ## Description
 
@@ -15,8 +15,9 @@ Solutions to each trophy will be provided every **5 minutes** during the worskho
 - :trophy: #2 - [Network Interactions](trophies/network_interactions.md)
 - :trophy: #3 - [Intercepting And Modifying Packets](trophies/intercepting_and_modifying.md)
 - :trophy: #4 - [IPv6 Reconnaissance](trophies/ipv6_reconnaissance.md)
-- :trophy: #5 - [Fun With X.509 Certificates](trophies/fun_with_x509.md)
-- :trophy: #6 - [Playing With TLS](trophies/playing_with_tls.md)
-- :trophy: #7 - [Adding a New Protocol](trophies/new_protocol.md)
-- :trophy: #8 - [Answering Machines](trophies/answering_machines.md)  
-- :trophy: #9 - [Pipes Introduction](trophies/pipes_introduction.md)  
+- :trophy: #5 - [Visualizations](trophies/visualizations.md)  
+- :trophy: #6 - [Fun With X.509 Certificates](trophies/fun_with_x509.md)
+- :trophy: #7 - [Playing With TLS](trophies/playing_with_tls.md)
+- :trophy: #8 - [Adding a New Protocol](trophies/new_protocol.md)
+- :trophy: #9 - [Answering Machines](trophies/answering_machines.md)  
+- :trophy: #10 - [Pipes Introduction](trophies/pipes_introduction.md)  

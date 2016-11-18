@@ -23,6 +23,13 @@ nothing.
 - sniff the network
 - launch the script
 
+**task #2**
+
+- add a `WrpcapSink()` named ws
+- redirect td to ws
+- sniff the network and check for a newly created PCAP file
+- launch the script
+
 
 ## Hints
 

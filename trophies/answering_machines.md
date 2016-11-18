@@ -14,7 +14,7 @@ our own protocol.
 
 **task #2**
 
-- edit the `am_trophy.py``am_trophy.py`
+- edit the `am_trophy.py` template
 - modify the `is_request()` method to match a **Guess**
 - modify the `make_reply()` method to return a **Trophy** if the Guess value is
   0x4242, a **Reply** containing 0 is the value is below 0x4242 and 1 otherwise

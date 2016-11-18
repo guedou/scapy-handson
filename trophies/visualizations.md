@@ -6,7 +6,7 @@ This trophy shows you some Scapy visualization tools.
 
 **task #1**
 
-- create the packet of you choice
+- create the packet of your choice
 - use `str` and `hexdump` to show the build packet values
 - call `show` and `show2` on the packet and notice the differences
 - call `pdfdump` or `canvas_dump`

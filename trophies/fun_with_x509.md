@@ -10,7 +10,7 @@ This trophy shows you some cool things that you can do.
 **task #1**
 
 - retrieve `grehack.fr` X.509 certificate as DER
-- use ̀`der2pem()` to convert the certificate to PEM
+- use `der2pem()` to convert the certificate to PEM
 - check the result with `openssl x509`
 - parse its content with the `X509_Cert` class
 - display the signature algorithm, and the subject name

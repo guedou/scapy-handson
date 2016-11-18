@@ -1,4 +1,4 @@
-# Intecepting and modifing packets
+# Intercepting and modifying packets
 
 This trophy shows howto use Scapy with NFQUEUE in order to tag and modify
 packets on the fly.

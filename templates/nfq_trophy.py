@@ -3,7 +3,7 @@
 """Template to use Scapy with NFQUEUE"""
 
 # Note: the following command must be used before launching this script:
-# sudo iptables -A OUTPUT -s 8.8.8.8 -p udp --sport 53 -j NFQUEUE --queue-num 2807
+# sudo iptables -A INPUT -s 8.8.8.8 -p udp --sport 53 -j NFQUEUE --queue-num 2807
 
 from scapy.all import *
 import nfqueue

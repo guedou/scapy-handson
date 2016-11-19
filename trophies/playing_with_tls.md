@@ -8,7 +8,8 @@ This trophy shows you some cool things that you can do.
 
 **task #1**
 
-- clone a new Scapy git repository from https://github.com/mtury/scapy.git
+- clone a new Scapy git repository from https://github.com/mtury/scapy.git, and
+  swith to the tl2 branch
 - use `sniff` to capture some HTTPS traffic (i.e. 443/tcp)
 - filter packets that have a `TLS` object
 - identify a ClientHello or a ServerHello
@@ -19,7 +20,7 @@ This trophy shows you some cool things that you can do.
 - edit the `tls_trophy.py` template
 - send a ClientHello
 - parse the received data with the `TLS` class
-- can you get the two certificates sent by the server ?
+- display the ciphersuite
 
 ## Hints
 

@@ -5,31 +5,15 @@
 from scapy.all import *
 
 
-#class GreHack(TODO):
-#    name = "TODO"
-#    fields_desc = [ "TODO" ]
-#
-#    def hashret(self):
-#        return "TODO"
-#
-#    def answers(self, other):
-#        return "TODO"
-
-class GreHack(Packet):
-    name = "GreHAck 2016"
-    fields_desc = [ ByteField("id", 0),
-                    ByteEnumField("type", 0, { 0: "Guess", "1": "Reply", "2": "Trophy"}),
-                    IntField("value", 0)
-                  ]
+class GreHack(TODO):
+    name = "TODO"
+    fields_desc = [ "TODO" ]
 
     def hashret(self):
-        return "%c" % self.id
+        return "TODO"
 
     def answers(self, other):
-        return self.id == other.id and ((self.type == 1 and other.type == 0) or (self.type == 2 and other.type == 0))
-
-
-bind_layers(UDP, GreHack, dport=1811, sport=1811)
+        return "TODO"
 
 
 if __name__ == "__main__":

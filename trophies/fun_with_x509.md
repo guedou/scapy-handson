@@ -24,7 +24,7 @@ This trophy shows you some cool things that you can do.
 
 **task #3**
 
-- generate an RSA private key using `openssl rsa`
+- generate an RSA private key using `openssl genrsa`
 - load it in Scapy with `PrivKey`
 - assign your birthday to the certificate serial number
 - use the `resignCert` method to sign the certificate with your own signature
@@ -35,4 +35,4 @@ This trophy shows you some cool things that you can do.
 
 - X.509 certificate can be downloaded from a web browser status bar
 - use the `obj` argument of `der2pem()` with the 'CERTIFICATE' type
-- set the `verify()` `h` and `t` arguments to sha256 and pkcs
+- verify the new signature, set the `verify()` `h` and `t` arguments to sha256 and pkcs

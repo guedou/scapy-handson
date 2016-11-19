@@ -18,7 +18,7 @@ packets on the fly.
 - check if it contains as DNS header
 - remove checksums and lengths
 - use `set_verdict_modified()` to send the packet processed by Scapy
-  - argument 31 is NF_ACCEPT, argument #2 is the packet string, argument #3 is the length
+  - argument #1 is NF_ACCEPT, argument #2 is the packet string, argument #3 is the length
  
 **task #3**
 

@@ -15,7 +15,7 @@ sck.connect(("grehack.fr", 443))
 # Receive data
 # TODO
 
-# Display certificate
+# Display the ciphersuite selected by the server
 # TODO
 
 # Close the socket

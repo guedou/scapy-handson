@@ -20,7 +20,7 @@ This trophy shows you howto implement a new protocol into scapy.
 - modify `answers()̀  to return True if the packet is an answer to `other`
 - check the results of the unit tests
 
-**task #2**
+**task #3**
 
 - use the `bind_layers()` function to tell Scapy that the GreHack protocol is on
   top of UDP with source and destination ports equal to 1811

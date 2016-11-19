@@ -23,7 +23,7 @@ nothing.
 - sniff the network
 - launch the script
 
-**task #2**
+**task #3**
 
 - add a `WrpcapSink()` named ws
 - redirect td to ws

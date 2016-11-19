@@ -6,8 +6,6 @@ Scapy (http://www.secdev.org/projects/scapy, https://github.com/secdev/scapy & h
 
 Each of them is different and gives you the opportunity to enhance your Scapy skills by manipulating yourself and watching a potential solution.
 
-Solutions to each trophy will be provided every **5 minutes** during the workshop.
-
 
 ## Trophies
 
@@ -19,5 +17,5 @@ Solutions to each trophy will be provided every **5 minutes** during the worksho
 - :trophy: #6 - [Fun With X.509 Certificates](trophies/fun_with_x509.md)
 - :trophy: #7 - [Playing With TLS](trophies/playing_with_tls.md)
 - :trophy: #8 - [Adding a New Protocol](trophies/new_protocol.md)
-- :trophy: #9 - [Answering Machines](trophies/answering_machines.md)  
+ :trophy: #9 - [Answering Machines](trophies/answering_machines.md)  
 - :trophy: #10 - [Pipes Introduction](trophies/pipes_introduction.md)  

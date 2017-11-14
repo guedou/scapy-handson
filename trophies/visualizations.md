@@ -2,7 +2,7 @@
 
 This trophy shows you some Scapy visualization tools.
 
-## Tasks
+## Tasks
 
 **task #1**
 
@@ -21,6 +21,6 @@ This trophy shows you some Scapy visualization tools.
 - use the `traceroute()` function to get the patch to two different targets
 - try the `world_trace()` and `trace3D()` methods
 
-## Hints
+## Hints
 
 - check the help of `multiplot()` and `traceroute()`

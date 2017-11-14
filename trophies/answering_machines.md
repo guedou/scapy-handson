@@ -5,7 +5,7 @@ Answering machines can be used to wait for a query and send a reply.
 This trophy focus on already created machines, as well as building a new one for
 our own protocol.
 
-## Tasks
+## Tasks
 
 **task #1**
 
@@ -20,6 +20,6 @@ our own protocol.
   0x4242, a **Reply** containing 0 is the value is below 0x4242 and 1 otherwise
 
 
-## Hints
+## Hints
 
 - `git grep AnsweringMachine` will display all Scapy answering machines

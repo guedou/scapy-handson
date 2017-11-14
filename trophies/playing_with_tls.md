@@ -1,18 +1,17 @@
 # Playing with TLS
 
-The pending [PR #294](playing_with_tls.md) brings a native TLS support to Scapy.
-
 This trophy shows you some cool things that you can do.
 
-## Tasks
+## Tasks
 
 **task #1**
 
+- load the `tls` layer with `load_layer()`
 - use `sniff` to capture some HTTPS traffic (i.e. 443/tcp)
 - filter packets that have a `TLS` object
 - identify a ClientHello or a ServerHello message
 - display the ciphersuites
 
-## Hints
+## Hints
 
 - the TAB key can be use to find Scapy layers names!

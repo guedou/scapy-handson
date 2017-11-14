@@ -4,7 +4,7 @@ as well as X.509 certificate parsing.
 
 This trophy shows you some cool things that you can do!
 
-## Tasks
+## Tasks
 
 **task #1**
 
@@ -31,7 +31,7 @@ This trophy shows you some cool things that you can do!
 - check the result with `openssl x509`
 - verify the signature using the `PrivKey` `verifyCert()` method
 
-## Hints
+## Hints
 
 - X.509 certificate can be downloaded from a web browser status bar or dev tools
 - use the `obj` argument of `der2pem()` with the 'CERTIFICATE' type

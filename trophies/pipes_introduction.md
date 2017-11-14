@@ -6,7 +6,7 @@ as sniffing, modifying and printing packets.
 This trophy provides simple examples that builds on a silly one that does
 nothing.
 
-## Tasks
+## Tasks
 
 **task #1**
 
@@ -33,7 +33,7 @@ nothing.
 - launch the script
 
 
-## Hints
+## Hints
 
 - in Scapy sources, the files `pipetool.py` and `scapypipes.py` give you all you
   need to know about pipes related objects

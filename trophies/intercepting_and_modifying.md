@@ -3,7 +3,7 @@
 This trophy shows howto use Scapy with NFQUEUE in order to tag and modify
 packets on the fly.
 
-## Tasks
+## Tasks
 
 **task #1**
 
@@ -26,7 +26,7 @@ packets on the fly.
 - identify the grehack.fr address
 - change it to 127.0.0.1
 
-## Hints
+## Hints
 
 - on Debian, install the `python-nfqueue` module
 - DNS is an *old* Scapy protocol, parsing then building might not give the same

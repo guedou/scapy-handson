@@ -1,4 +1,4 @@
-# Answering machines
+# Answering Machines
 
 Answering machines can be used to wait for a query and send a reply.
 

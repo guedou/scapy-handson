@@ -1,8 +1,8 @@
-# Manipulating packets
+# Manipulating Packets
 
 This trophy gives you the opportunity to perform simple Scapy packets manipulation.
 
-## Tasks
+## Tasks
 
 **task #1**
 
@@ -10,17 +10,18 @@ This trophy gives you the opportunity to perform simple Scapy packets manipulati
 - display its summary
 - access the source address computed by Scapy
 - use the `sprintf()` method to display the source UDP port
-- access the layer before the DNS one
 - access the UDP layer
+- access the layer before the DNS one
 
 **task #2**
 
 - create an implicit packet that builds 5 explicit packets with 5 different TTL values
-- iterate over this packets
+- iterate over these packets
 
-## Hints
+## Hints
 
 - `ls()` list Scapy protocols names
 - `ls(PROTO)` list the fields of the _PROTO_ protocol
 - the `/` operator stacks protocols
 - four Scapy protocol headers are required
+- the `DNSQR` layer must be used as the DNS query

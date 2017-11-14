@@ -1,12 +1,12 @@
 # Adding a new protocol
 
-This trophy shows you howto implement a new protocol into scapy.
+This trophy shows you howto implement a new protocol into Scapy.
 
-## Tasks
+## Tasks
 
 **task #1**
 
-- edit the `proto_trophy.py` template
+- edit the `templates/proto_trophy.py` file
 - modify the `GreHack` packet
 - add a `ByteField` named **id**
 - add a `ByteEnumField` named **type** (type 0 is called **Guess**, type 1 is
@@ -17,7 +17,7 @@ This trophy shows you howto implement a new protocol into scapy.
 
 - modify `hashret()` to return the packed **id** (i.e. a single byte, not an
   integer)
-- modify `answers()̀  to return True if the packet is an answer to `other`
+- modify `answers()̀  to return `True` if the packet is an answer to `other`
 - check the results of the unit tests
 
 **task #3**
@@ -26,8 +26,8 @@ This trophy shows you howto implement a new protocol into scapy.
   top of UDP with source and destination ports equal to 1811
 - check the results of the unit tests
 
-## Hints
+## Hints
 
-- protocols inherit from Packet, have a name, and field description
+- protocols inherit from `Packet`, have a name, and field description
 - `hashret()` is used by Scapy to ease matching Query and Replies
 - `answers()` is used by Scapy to find if a packet is a reply to another one

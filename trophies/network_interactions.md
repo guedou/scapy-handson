@@ -1,12 +1,12 @@
-# Network interactions
+# Network Interactions
 
 This trophy is about sending and receiving packets on the network.
 
-## Tasks
+## Tasks
 
 **task #1**
 
-- build a simple ICMP packet to 8.8.8.8
+- build a simple ICMP packet to `8.8.8.8`
 - send it to the network
 - display the whole reply using `show()`
 
@@ -34,10 +34,10 @@ This trophy is about sending and receiving packets on the network.
 - display them in wireshark (without leaving Scapy)
 - write these 5 packets into `test.pcap`
 - read them back from the saved PCAP file into the pkts variable
-- use `+` to concatenate these packets
+- use `+` to concatenate these packets (i.e. build a list of 10 packets)
 
 
-## Hints
+## Hints
 
 - `sr*()` functions send at layer 3 
 - `srp*()` functions send at layer 2 

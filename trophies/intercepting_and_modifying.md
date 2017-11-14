@@ -1,4 +1,4 @@
-# Intercepting and modifying packets
+# Intercepting and Modifying Packets
 
 This trophy shows howto use Scapy with NFQUEUE in order to tag and modify
 packets on the fly.
@@ -7,8 +7,8 @@ packets on the fly.
 
 **task #1**
 
-- edit the `nfq_trophy.py` template
-- trigger a packet with `dig` to get the IP address of grehack.fr
+- edit the `templates/nfq_trophy.py` file
+- trigger a packet with `dig` to get the IP address of `grehack.fr`
 - check if it works as expected
 
 

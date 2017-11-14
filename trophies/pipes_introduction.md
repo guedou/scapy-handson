@@ -1,4 +1,4 @@
-# Pipes introduction
+# Pipes Introduction
 
 Pipes are not a well known Scapy feature. They can be used to chain actions such
 as sniffing, modifying and printing packets.
@@ -17,11 +17,13 @@ nothing.
 
 **task #2**
 
+- remove the clfs to cs redirection
 - add a `TransformDrain()` named td that uses `transform_f()`
 - add a `InjectSink()` named ijs
 - redirect clfs to td, and td to ijs
-- sniff the network
-- launch the script
+- test it:
+  - sniff the network
+  - launch the script
 
 **task #3**
 
@@ -33,7 +35,7 @@ nothing.
 
 ## Hints
 
-- in Scapy sources the files `pipetool.py` and `scapypipes.py` give you all you
+- in Scapy sources, the files `pipetool.py` and `scapypipes.py` give you all you
   need to know about pipes related objects
 - a Sink is the last element of a pipe,  a Drain 'manipulates' data and forwards
   it

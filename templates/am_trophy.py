@@ -1,9 +1,12 @@
 # Guillaume Valadon <guillaume@valadon.net>
 
-"""Template to create a Scapy answering machine"""
+"""
+Template to create a Scapy answering machine
+"""
 
 from scapy.all import *
 from proto_trophy import *
+
 
 class GreHack_am(AnsweringMachine):
 

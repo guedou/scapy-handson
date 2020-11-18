@@ -1,7 +1,7 @@
 # Intercepting and Modifying Packets
 
-This trophy shows howto use Scapy with NFQUEUE in order to tag and modify
-packets on the fly.
+This trophy shows how to use Scapy with NFQUEUE in order to tag and modify
+packets on the fly. It only works on Linux with Python2.
 
 ## Tasks
 
@@ -15,7 +15,7 @@ packets on the fly.
 **task #2**
 
 - parse the packet with Scapy
-- check if it contains as DNS header
+- check if it contains a DNS header
 - remove checksums and lengths
 - use `set_verdict_modified()` to send the packet processed by Scapy
   - argument #1 is NF_ACCEPT, argument #2 is the packet string, argument #3 is the length

@@ -1,6 +1,6 @@
 # Visualizations
 
-This trophy shows you some Scapy visualization tools.
+This trophy shows you some Scapy visualization tools. Tasks #2 and #3 requires to run Scapy either in a graphical environment or in a Jupyter notebook.
 
 ## Tasks
 
@@ -19,8 +19,9 @@ This trophy shows you some Scapy visualization tools.
 **task #3**
 
 - use the `traceroute()` function to get the patch to two different targets
-- try the `world_trace()` and `trace3D()` methods
+- try the `world_trace()` method
 
 ## Hints
 
+- `pdfdump()` accepts the `filename` argument
 - check the help of `multiplot()` and `traceroute()`

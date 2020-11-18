@@ -1,6 +1,8 @@
 # Guillaume Valadon <guillaume@valadon.net>
 
-"""Template to use Scapy with NFQUEUE"""
+"""
+Template to use Scapy with NFQUEUE on Linux
+"""
 
 # Note: the following command must be used before launching this script:
 # sudo iptables -I INPUT -s 8.8.8.8 -p udp --sport 53 -j NFQUEUE --queue-num 2807
@@ -8,6 +10,7 @@
 from scapy.all import *
 import nfqueue
 import socket
+
 
 def scapy_callback(packet):
     # Get the data

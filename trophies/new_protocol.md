@@ -1,6 +1,6 @@
 # Adding a new protocol
 
-This trophy shows you howto implement a new protocol into Scapy.
+This trophy shows you how to implement a new protocol into Scapy.
 
 ## Tasks
 
@@ -17,7 +17,7 @@ This trophy shows you howto implement a new protocol into Scapy.
 
 - modify `hashret()` to return the packed **id** (i.e. a single byte, not an
   integer)
-- modify `answers()̀  to return `True` if the packet is an answer to `other`
+- modify `answers()`  to return `True` if the packet is an answer to `other`
 - check the results of the unit tests
 
 **task #3**

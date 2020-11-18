@@ -16,13 +16,14 @@ This trophy is about sending and receiving packets on the network.
 - build an implicit ICMP frame (i.e. layer 2)  with a TTL value from to 2 to 7
 - send it to the network
 - use `nsummary()` to show replies
+- display the first query, and the second answer
 - display the address of the third router on the path
 - display the results as hex strings
 
 
 **task #3**
 
-- send ICMP echo request forever using the `sr*()` function that send packets
+- send ICMP echo requests using the `sr*()` function that send packets
   forever
 - stop the function
 - use the `prn` argument to display the source IP address of the replies

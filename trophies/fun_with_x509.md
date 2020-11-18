@@ -1,3 +1,4 @@
+# Fun With X.509 Certificates
 
 Scapy is able to natively parse ASN.1. Internally, this feature is used for SNMP
 as well as X.509 certificate parsing.
@@ -33,6 +34,6 @@ This trophy shows you some cool things that you can do!
 
 ## Hints
 
-- X.509 certificate can be downloaded from a web browser status bar or dev tools
+- X.509 certificate can be downloaded from a web browser status bar or developer tools
 - use the `obj` argument of `der2pem()` with the 'CERTIFICATE' type
 - verify the new signature, set the `verify()` `h` and `t` arguments to sha256 and pkcs

@@ -22,8 +22,8 @@ Scapy.
 
 **task #3**
 
-- use `srloop()` to send the previously built message, using the `multi` argument
-- do you have many answers ?
+- use `srloop()` to send the previously built packet, using the `multi` argument
+- do you have many answers?
 - stop it
 - add a `prn` argument to display all received IPv6 source addresses
 

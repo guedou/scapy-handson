@@ -1,13 +1,13 @@
-# Scapy Hands-on at #GreHack17
+# Scapy Hands-on at #GreHack20
 
-This file contains possible solutions for the GreHack17 trophies!
+This file contains possible solutions for the GreHack20 trophies!
 
 
 ## Trophy 1 - Manipulating Packets
 
 **task #1**
 ```
->>> p = IP(dst="8.8.8.8")/UDP()/DNS(qd=DNSQR())
+>>> p = IP(dst="8.8.8.8") / UDP() / DNS(qd=DNSQR())
 
 >>> p.summary()
 'IP / UDP / DNS Qry "www.example.com" '
@@ -27,7 +27,7 @@ This file contains possible solutions for the GreHack17 trophies!
 
 **task #2**
 ```
->>> p = IP(ttl=(1,5))/ICMP()
+>>> p = IP(ttl=(1, 5)) / ICMP()
 
 >>> [packet for packet in p]
 [<IP  frag=0 ttl=1 proto=icmp |<ICMP  |>>, <IP  frag=0 ttl=2 proto=icmp |<ICMP |>>, <IP  frag=0 ttl=3 proto=icmp |<ICMP  |>>, <IP  frag=0 ttl=4 proto=icmp |<ICMP  |>>, <IP  frag=0 ttl=5 proto=icmp |<ICMP  |>>]
@@ -38,7 +38,7 @@ This file contains possible solutions for the GreHack17 trophies!
 
 **task #1**
 ```
->>> p = IP(dst="8.8.8.8")/ICMP()
+>>> p = IP(dst="8.8.8.8") / ICMP()
 
 >>> r = sr1(p)
 Begin emission:
@@ -71,9 +71,9 @@ Received 1 packets, got 1 answers, remaining 0 packets
 
 **task #2**
 ```
->>> p = Ether()/IP(dst="8.8.8.8", ttl=(2,7))/ICMP()
+>>> p = Ether() / IP(dst="8.8.8.8", ttl=(2, 7)) / ICMP()
 
->>> r,u = srp(p)
+>>> r, u = srp(p)
 Begin emission:
 Finished to send 6 packets.
 ******
@@ -87,7 +87,13 @@ Received 6 packets, got 6 answers, remaining 0 packets
 0004 Ether / IP / ICMP 172.20.10.2 > 8.8.8.8 echo-request 0 ==> Ether / IP / ICMP 10.164.26.65 > 172.20.10.2 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
 0005 Ether / IP / ICMP 172.20.10.2 > 8.8.8.8 echo-request 0 ==> Ether / IP / ICMP 193.252.137.89 > 172.20.10.2 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
 
->>> r[1][1][IP].src
+>>> r[0].query
+<Ether  type=IPv4 |<IP  frag=0 ttl=2 proto=icmp dst=8.8.8.8 |<ICMP  |>>>
+
+>>> r[1].answer
+<Ether  dst=b8:e8:56:45:8c:e6 src=b8:26:6c:5f:4e:ee type=IPv4 |<IP  version=4 ihl=5 tos=0x0 len=56 id=0 flags= frag=0 ttl=253 proto=icmp chksum=0xbeaf src=193.253.82.102 dst=192.168.42.9 |<ICMP  type=time-exceeded code=ttl-zero-during-transit chksum=0xf4ff reserved=0 length=0 unused=0 |<IPerror  version=4 ihl=5 tos=0x0 len=28 id=1 flags= frag=0 ttl=1 proto=icmp chksum=0xbf1f src=192.168.42.9 dst=8.8.8.8 |<ICMPerror  type=echo-request code=0 chksum=0xf7ff id=0x0 seq=0x0 |>>>>>
+
+>>> r[2].answer[IP].src
 '10.164.26.49'
 
 >>> r.hexdump()
@@ -108,10 +114,10 @@ Received 6 packets, got 6 answers, remaining 0 packets
 
 **task #3**
 ```
->>> srloop(IP(dst="8.8.8.8")/ICMP())
+>>> srloop(IP(dst="8.8.8.8") / ICMP())
 [.. truncated ..]
 
->>> srloop(IP(dst="8.8.8.8")/ICMP(), prn=lambda p: p[1].src)
+>>> srloop(IP(dst="8.8.8.8") / ICMP(), prn=lambda p: p[1].src)
 [.. truncated ..]
 ```
 
@@ -134,7 +140,7 @@ Received 6 packets, got 6 answers, remaining 0 packets
 
 ## Trophy 3 - Interactions and Modifying Packets
 
-The following command can be used to trigger the DNS answer
+The following command can be used to trigger the DNS answer:
 ```
 $ dig @8.8.8.8 grehack.fr A
 ```
@@ -149,20 +155,20 @@ def scapy_callback(packet):
     p = IP(data)
     # Check if it contains a DNS header
     if p.getlayer(DNS):
-        # Remove cheksums and lengths
+        # Remove checksums and lengths
         del(p[IP].chksum, p[IP].len, p[UDP].chksum, p[UDP].len)
 
-        #Iterate over the received DNS Resource Records
+        # Iterate over the received DNS Resource Records
         tmp_dns_an = p[DNS].an
         while tmp_dns_an:
-            #Identify the grehack.fr address and change it to 127.0.0.1
-            if tmp_dns_an.rrname == "grehack.fr." and tmp_dns_an.type == 1: # 'A' DNS query
+            # Identify the grehack.fr address and change it to 127.0.0.1
+            if tmp_dns_an.rrname == "grehack.fr." and tmp_dns_an.type == 1:  # 'A' DNS query
                 tmp_dns_an.rdata = "127.0.0.1"
                 break
             tmp_dns_an = tmp_dns_an.payload
 
         # Rebuild the packet
-        s = str(p)
+        s = raw(p)
         # Set the verdict and return the new packet
         packet.set_verdict_modified(nfqueue.NF_ACCEPT, s, len(s))
              
@@ -175,14 +181,14 @@ def scapy_callback(packet):
 
 **task #1**
 ```
->>> p = IPv6()/ICMPv6ND_RS()
+>>> p = IPv6() / ICMPv6ND_RS()
 
 >>> r = sr1(p)
 ```
 
 **task #2**
 ```
->>> p = IPv6(dst="ff02::1")/ICMPv6EchoRequest()
+>>> p = IPv6(dst="ff02::1") / ICMPv6EchoRequest()
 
 >>> conf.checkIPsrc = False
 
@@ -192,8 +198,10 @@ def scapy_callback(packet):
 **task #3**
 ```
 >>> conf.checkIPsrc = False
->>> p = IPv6(dst="ff02::1")/ICMPv6EchoRequest()
->>> srloop(p, multi=1, prn=lambda (s,r): r[IPv6].src)
+
+>>> p = IPv6(dst="ff02::1") / ICMPv6EchoRequest()
+
+>>> srloop(p, multi=1, prn=lambda sr: sr[1][IPv6].src)
 ```
 
 
@@ -201,9 +209,10 @@ def scapy_callback(packet):
 
 **task #1**
 ```
->>> p = IPv6()/ICMPv6EchoRequest()
+>>> p = IPv6() / ICMPv6EchoRequest()
 
 >>> raw(p)
+
 >>> hexdump(p)
 
 >>> p.show()
@@ -214,9 +223,9 @@ def scapy_callback(packet):
 
 **task #2**
 ```
->>> ans, unans = srloop(IP(dst=["8.8.8.8", "8.8.4.4"])/ICMP(), inter=.1, timeout=.1, count=100, verbose=False)
+>>> ans, unans = srloop(IP(dst=["8.8.8.8", "8.8.4.4"]) / ICMP(), inter=.1, timeout=.1, count=100, verbose=False)
 
->>> ans.multiplot(lambda (x, y): (y[IP].src, (y.time, y[IP].id)), plot_xy=True)
+>>> ans.multiplot(lambda sr: (sr[1][IP].src, (sr[1].time, sr[1][IP].id)), plot_xy=True)
 ```
 
 **task #3**
@@ -224,7 +233,6 @@ def scapy_callback(packet):
 >>> ans, unans = traceroute("www.wide.ad.jp", maxttl=15)
 
 >>> ans.world_trace()
->>> ans.trace3D()  # it is currently broken. we need to fix it
 ```
 
 
@@ -237,10 +245,13 @@ manipulation tools.
 ```
 >>> load_layer("tls")
 
->>> der_str = open("grehack.fr.der").read()
+>>> der_str = open("grehack.fr.der", "rb").read()
 >>> pem_str = der2pem(der_str, obj="CERTIFICATE")
-
 >>> open("grehack.fr.pem", "w").write(pem_str)
+
+# If you could only retrive the certificate as PEM
+>>> pem_str = open("grehack.fr.pem").read()
+>>> der_str = pem2der(bytes(pem_str, "ascii"))
 
 >>> c = X509_Cert(der_str)
 
@@ -264,11 +275,12 @@ $ openssl x509 -noout -text -in grehack.fr.pem
 >>> c = Cert("grehack.fr.der")
 
 >>> c.remainingDays()
-45.50140046296296
+64.64104166666667
 
 >>> c.isSelfSigned()
 False
 ```
+pen("new_cert.pem", "w").write(der2pem(str(new_cert), obj="CERTIFICATE"))
 
 **task #3**
 
@@ -283,7 +295,7 @@ $ openssl genrsa -out priv.key
 >>> c.tbsCertificate.serialNumber = 0x2807
 
 >>> new_cert = pk.resignCert(c.x509Cert)
->>> open("new_cert.pem", "w").write(der2pem(str(new_cert), obj="CERTIFICATE"))
+>>> open("new_cert.pem", "bw").write(der2pem(raw(new_cert), obj="CERTIFICATE"))
 
 >>> pk.verifyCert(new_cert)
 True
@@ -322,6 +334,7 @@ $ openssl x509 -noout -text -in new_cert.pem |grep -i serial
  10]
 ```
 
+
 ## Trophy 8 - Adding a New Protocol
 
 ```
@@ -348,6 +361,7 @@ bind_layers(UDP, GreHack, dport=1811, sport=1811)
 **task #1**
 
 ```
+# You might need to specify the interface using the iface argument
 >>> farpd(IP_addr="192.168.1.100", ARP_addr="00:01:02:03:04:05")
 
 # In another Scapy shell
@@ -372,8 +386,7 @@ The code looks like:
         else:
             answer = GreHack(type=2, value=1)
 
-
-        return IP()/UDP()/answer
+        return IP() / UDP() / answer
 ```
 
 

@@ -1,4 +1,4 @@
-# Scapy Hands-on at #GreHack20
+# Scapy Hands-on at #GreHack21
 
 
 ## Description
@@ -10,6 +10,8 @@ This repository contains small exercises (or trophies) that gives you the opport
 The following online resources will be useful during this workshop:
 - [Github repository](https://github.com/secdev/scapy)
 - [Scapy in 15 minutes (or longer)](https://github.com/secdev/scapy/blob/master/doc/notebooks/Scapy%20in%2015%20minutes.ipynb)
+- [Scapy Tutorial](https://guedou.github.io/talks/2019_BHUSA/Scapy.slides.html#/)
+- [Scapy Turned 18](https://docs.google.com/presentation/d/1OWMumgOdQsoqkT0Bi8mqtqrb4WtM1n83tPcQV4eTdlw/edit?usp=sharing)
 - [Documentation](http://scapy.readthedocs.io/en/latest/)
 
 

@@ -8,25 +8,28 @@ Template to use Scapy with NFQUEUE on Linux
 # sudo iptables -I INPUT -s 8.8.8.8 -p udp --sport 53 -j NFQUEUE --queue-num 2807
 
 from scapy.all import *
-import nfqueue
+from netfilterqueue import NetfilterQueue
 import socket
 
 
 def scapy_callback(packet):
     # Get the data
-    data = packet.get_data()
+    data = packet.get_payload()
+    print(IP(data).summary())
 
     # Accept the packet
-    packet.set_verdict(nfqueue.NF_ACCEPT)  # NF_DROP is also valid
+    packet.accept()
 
 
 if __name__ == "__main__":
     # Get an NFQUEUE handler
-    q = nfqueue.queue()
+    nfqueue = NetfilterQueue()
 
     # Set the callback
-    q.set_callback(scapy_callback)
+    nfqueue.bind(2807, scapy_callback)
+    try:
+        nfqueue.run()
+    except KeyboardInterrupt:
+        pass
 
-    # Open the queue and start parsing packets
-    q.fast_open(2807, socket.AF_INET)
-    q.try_run()
+    nfqueue.unbind()

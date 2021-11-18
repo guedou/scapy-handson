@@ -24,4 +24,3 @@ This trophy gives you the opportunity to perform simple Scapy packets manipulati
 - `ls(PROTO)` list the fields of the _PROTO_ protocol
 - the `/` operator stacks protocols
 - four Scapy protocol headers are required
-- the `DNSQR` layer must be used as the DNS query

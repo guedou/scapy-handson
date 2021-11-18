@@ -29,5 +29,5 @@ This trophy shows you how to implement a new protocol into Scapy.
 ## Hints
 
 - protocols inherit from `Packet`, have a name, and field description
-- `hashret()` is used by Scapy to ease matching Query and Replies
+- `hashret()` is used by Scapy to ease matching Queries and Replies
 - `answers()` is used by Scapy to find if a packet is a reply to another one

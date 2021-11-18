@@ -16,12 +16,6 @@ This trophy shows you some Scapy visualization tools. Tasks #2 and #3 requires t
 - use `srloop()` to send 100 packets to `8.8.8.8` and `8.8.4.4`
 - call `multiplot()` on the resulting packets list and plot IP id
 
-**task #3**
-
-- use the `traceroute()` function to get the patch to two different targets
-- try the `world_trace()` method
-
 ## Hints
 
 - `pdfdump()` accepts the `filename` argument
-- check the help of `multiplot()` and `traceroute()`

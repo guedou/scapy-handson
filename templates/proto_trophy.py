@@ -19,16 +19,15 @@ class GreHack(TODO):
 
 
 if __name__ == "__main__":
-
     # Unit tests
     p1 = GreHack(type=1)
     p2 = GreHack(type=0)
-    print(p1.answers(p2))  # True
-    print(p1.answers(p1))  # False
+    assert(p1.answers(p2))
+    assert(p1.answers(p1) is False)
 
     p3 = GreHack(type=2)
-    print(p3.answers(p2))  # True
-    print(p2.answers(p3))  # False
+    assert(p3.answers(p2))
+    assert(p2.answers(p3) is False)
 
     p4 = IP(raw(IP() / UDP() / GreHack()))
-    print(p4[UDP].sport == 1811)  # True
+    assert(p4[UDP].sport == 1811)

@@ -10,7 +10,7 @@ This trophy shows you some cool things that you can do!
 **task #1**
 
 - load the `tls` layer with `load_layer()`
-- retrieve `grehack.fr` X.509 certificate as DER
+- retrieve the `grehack.fr` X.509 certificate as DER
 - use `der2pem()` to convert the certificate to PEM
 - write the PEM file to a new file, and check the result with `openssl x509`
 - parse the certificate content with the `X509_Cert()` class
@@ -36,4 +36,3 @@ This trophy shows you some cool things that you can do!
 
 - X.509 certificate can be downloaded from a web browser status bar or developer tools
 - use the `obj` argument of `der2pem()` with the 'CERTIFICATE' type
-- verify the new signature, set the `verify()` `h` and `t` arguments to sha256 and pkcs

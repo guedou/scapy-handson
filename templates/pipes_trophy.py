@@ -24,4 +24,4 @@ clf.send("Hello GreHack!")
 clf.is_exhausted = True
 
 # Stop the pipe engine
-pe.wait_and_top()
+pe.wait_and_stop()

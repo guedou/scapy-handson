@@ -5,7 +5,7 @@ packets on the fly. It only works on Linux with Python2.
 
 You need to follow the instructions on https://github.com/oremanj/python-netfilterqueue to install finally be able to intall the module with:
 ```
-pip install NetfilterQueue`
+pip install NetfilterQueue
 ```
 
 

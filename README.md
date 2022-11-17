@@ -1,4 +1,4 @@
-# Scapy Hands-on at #GreHack21
+# Scapy Hands-on at #GreHack
 
 
 ## Description

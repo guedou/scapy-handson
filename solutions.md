@@ -1,6 +1,6 @@
-# Scapy Hands-on at #GreHack21
+# Scapy Hands-on at #GreHack
 
-This file contains possible solutions for the GreHack21 trophies!
+This file contains possible solutions for the GreHack trophies!
 
 
 ## Trophy 1 - Manipulating Packets
@@ -339,7 +339,7 @@ $ editcap --inject-secrets tls,grehack.fr.keys.log grehack.fr.pcap grehack.fr.pc
 
 ```
 class GreHack(Packet):
-    name = "GreHAck 2021"
+    name = "GreHAck Packet"
     fields_desc = [ ByteField("id", 0),
                     ByteEnumField("type", 0, { 0: "Guess", "1": "Reply", "2": "Trophy"}),
                     IntField("value", 0)

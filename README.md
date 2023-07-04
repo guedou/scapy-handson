@@ -1,11 +1,10 @@
-# Scapy Hands-on at #GreHack
-
+# Scapy Hands-on
 
 ## Description
 
 [Scapy](https://www.scapy.net), is a powerful Python-based interactive packet manipulation program and library. It can be used to forge or decode packets for a wide number of protocols, send them on the wire, capture them, match requests and replies, and much more.
 
-This repository contains small exercises (or trophies) that gives you the opportunity to enhance your Scapy skills by manipulating yourself and watching a potential solution!
+This repository contains small exercises (called trophies) that gives you the opportunity to enhance your Scapy skills by manipulating yourself and watching a potential solution!
 
 The following online resources will be useful during this workshop:
 - [Github repository](https://github.com/secdev/scapy)
@@ -13,7 +12,6 @@ The following online resources will be useful during this workshop:
 - [Scapy Tutorial](https://guedou.github.io/talks/2019_BHUSA/Scapy.slides.html#/)
 - [Scapy Turned 18](https://docs.google.com/presentation/d/1OWMumgOdQsoqkT0Bi8mqtqrb4WtM1n83tPcQV4eTdlw/edit?usp=sharing)
 - [Documentation](http://scapy.readthedocs.io/en/latest/)
-
 
 ## Trophies
 

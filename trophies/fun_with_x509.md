@@ -7,7 +7,7 @@ This trophy shows you some cool things that you can do!
 
 ## Tasks
 
-**task #1**
+### Task #1
 
 - load the `tls` layer with `load_layer()`
 - retrieve the `grehack.fr` X.509 certificate as DER
@@ -17,15 +17,15 @@ This trophy shows you some cool things that you can do!
 - display the signature algorithm, and the subject name
 - find the name of the OCSP server from the extensions
 
-**task #2**
+### Task #2
 
 - use the `Cert()` object to load the certificate from its filename
 - display the number of days until expiration
-- is it a self signed certificate?
+- is it a self-signed certificate?
 
-**task #3**
+### Task #3
 
-- generate a RSA private key using `openssl genrsa`
+- generate an RSA private key using `openssl genrsa`
 - load it in Scapy with `PrivKey()`
 - assign your birthday to the certificate serial number
 - use the `resignCert()` method to sign the certificate with your own signature

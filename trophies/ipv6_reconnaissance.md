@@ -5,28 +5,25 @@ Scapy.
 
 ## Tasks
 
-**task #1**
+### Task #1
 
 - build a simple IPv6 packet with a Router Solicitation (RS) packet on top
 - send it with `sr1()`
 - do you have an answer?
 
-
-**task #2**
+### Task #2
 
 - build a simple IPv6 `ping6` packet to `ff0::1` (i.e. all nodes)
 - set the `conf.checkIPsrc` variable to `False`
 - send it with `sr1()`
 - do you have an answer?
 
-
-**task #3**
+### Task #3
 
 - use `srloop()` to send the previously built packet, using the `multi` argument
 - do you have many answers?
 - stop it
 - add a `prn` argument to display all received IPv6 source addresses
-
 
 ## Hints
 

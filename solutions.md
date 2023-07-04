@@ -164,13 +164,13 @@ def scapy_callback(packet):
         del(p[IP].chksum, p[IP].len, p[UDP].chksum, p[UDP].len)
 
         # Iterate over the received DNS Resource Records
-        tmp_dns_an = p[DNS].an
-        while tmp_dns_an:
+        for dns_an in p[DNS].an:
             # Identify the grehack.fr address and change it to 127.0.0.1
-            if tmp_dns_an.rrname == "grehack.fr." and tmp_dns_an.type == 1:  # 'A' DNS query
-                tmp_dns_an.rdata = "127.0.0.1"
+            print(dns_an.rrname, dns_an.type)
+            if dns_an.rrname == b"grehack.fr." and dns_an.type == 1:  # 'A' DNS query
+                dns_an.rdata = b"127.0.0.1"
+                print("bla")
                 break
-            tmp_dns_an = tmp_dns_an.payload
 
         # Rebuild the packet
         s = raw(p)
@@ -193,7 +193,7 @@ def scapy_callback(packet):
 
 ### Task #2
 
-```pythpn
+```python
 >>> p = IPv6(dst="ff02::1") / ICMPv6EchoRequest()
 
 >>> conf.checkIPsrc = False
@@ -238,8 +238,7 @@ def scapy_callback(packet):
 
 ## Trophy 6 - Fun With X.509 Certificates
 
-You might need to install the python `ecdsa` plugin to enable Certificate
-manipulation tools.
+You might need to install the python `ecdsa` plugin to enable Certificate manipulation tools.
 
 ### Task #1
 
@@ -330,7 +329,7 @@ openssl x509 -noout -text -in new_cert.pem |grep -i serial
 
 ### Task #2
 
-```python
+```shell
 sudo tcpdump -w grehack.fr.pcap host grehack.fr and port 443
 
 SLKEYLOGFILE=grehack.fr.keys.log curl --tls-max 1.2 https://grehack.fr
@@ -342,6 +341,7 @@ editcap --inject-secrets tls,grehack.fr.keys.log grehack.fr.pcap grehack.fr.pcap
 >>> load_layer("tls")
 
 >>> l = rdpcap("grehack.fr.pcapng")
+>>> conf.tls_session_enable = True
 
 >>> [p for p in l if TLS in p and p[TLS].type == 23]
 [<Ether  dst=00:1c:42:00:00:18 src=00:1c:42:4c:9c:6c type=IPv4 |<IP  version=4 ihl=5 tos=0x0 len=143 id=23763 flags=DF frag=0 ttl=64 proto=tcp chksum=0xe9b0 src=10.211.55.4 dst=137.74.40.196 |<TCP  sport=40532 dport=https seq=303795701 ack=433210934 dataofs=5 reserved=0 flags=PA window=501 chksum=0xf466 urgptr=0 |<TLS  type=application_data version=TLS 1.2 len=98    [deciphered_len= 74] iv=b'\xe8\xef^\xc4\xf1\x93\x06\x06' msg=[<TLSApplicationData  data='GET / HTTP/1.1\r\nHost: grehack.fr\r\nUser-Agent: curl/7.74.0\r\nAccept: */*\r\n\r\n' |>] mac=b'\xfdW&\x98.\xcfxRm\xf9\x90b\xca\xf3\x82\xb8' padlen=None |>>>>, <Ether  dst=00:1c:42:4c:9c:6c src=00:1c:42:00:00:18 type=IPv4 |<IP  version=4 ihl=5 tos=0x0 len=1500 id=59987 flags= frag=0 ttl=128 proto=tcp chksum=0x56e3 src=137.74.40.196 dst=10.211.55.4 |<TCP  sport=https dport=40532 seq=433210934 ack=303795804 dataofs=5 reserved=0 flags=PA window=16384 chksum=0xd341 urgptr=0 |<TLS  type=application_data version=TLS 1.2 len=2737    [deciphered_len= 1431] iv=b'\xb5\xb6w}\x8c\xe5\x92\xb0' msg=[<TLSApplicationData  data='HTTP/1.1 200 OK\r\nServer: nginx/1.10.3\r\nDate: Thu, 18 Nov 2021 11:31:36 GMT\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 2520\r\nConnection: keep-alive\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n<!DOCTYPE html>\n<html>\n\n<head>\n\t<title>Ethical hacking conference and Capture the flag in Grenoble</title>\n\t<meta http-equiv="Content-type" content="text/html" charset="UTF-8">\n\t<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n\t<link href="/static/_2021/css/grehack.css" rel="stylesheet">\n\t<link media="screen and (min-width: 600px)" href="/static/_2021/css/grehack_wide.css" rel="stylesheet">\n\t<link rel="shortcut icon" type="image/x-icon" href="/static/_2021/img/favicon.ico">\n\t\n\t\n\t\n</head>\n\n<body>\n\n<img class="banner" src="/static/_2021/img/gh21_header.png" alt="GreHack 9th edition"/>\n\n<nav class="navbar">\n  <div class="navrow">\n    <a class="navtab" href="/2021/">Home</a>\n    <a class="navtab" href="/2021/info">Info</a>\n    <a class="navtab" href="/2021/program">Program</a>\n    <a class="navtab" href="/2021/sponsors">Sponsors</a>\n    <a class="navtab" href="/2021/workshops">Workshops</a>\n    <a class="navtab" href="/2021/ctf">CTF</a>\n  </div>\n</nav>\n\n<hr class="dash"/>\n\n<main>\n\n<h1>Save the date for GreHack 2021</h1>\n<p class="lead">\n    The 9<sup>th</sup> edition of GreHack will hold on <strong>November 19<sup>th</sup>, 2021</strong> and will be online.\n</p>\n<h2>Workshops registrat' |>] mac=b'Y~\xe8>p\xf8e\xca\x92t\xa2T\x8fkp\xbe' padlen=None |>>>>]
@@ -351,7 +351,7 @@ editcap --inject-secrets tls,grehack.fr.keys.log grehack.fr.pcap grehack.fr.pcap
 
 ```python
 class GreHack(Packet):
-    name = "GreHAck Packet"
+    name = "GreHack Packet"
     fields_desc = [ ByteField("id", 0),
                     ByteEnumField("type", 0, { 0: "Guess", "1": "Reply", "2": "Trophy"}),
                     IntField("value", 0)
@@ -383,7 +383,7 @@ bind_layers(UDP, GreHack, dport=1811, sport=1811)
 
 The code looks like:
 
-```pythpn
+```python
     def is_request(self, req):
         return isinstance(req, GreHack) and req[GreHack].type == 1
 

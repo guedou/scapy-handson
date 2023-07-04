@@ -4,7 +4,7 @@ This trophy shows you how to implement a new protocol into Scapy.
 
 ## Tasks
 
-**task #1**
+### Task #1
 
 - edit the `templates/proto_trophy.py` file
 - modify the `GreHack` packet
@@ -13,14 +13,14 @@ This trophy shows you how to implement a new protocol into Scapy.
   **Reply**, and type 2 **Trophy**)
 - add a `IntField` named **value**
 
-**task #2**
+### Task #2
 
 - modify `hashret()` to return the packed **id** (i.e. a single byte, not an
   integer)
-- modify `answers()`  to return `True` if the packet is an answer to `other`
+- modify `answers()` to return `True` if the packet is an answer to `other`
 - check the results of the unit tests
 
-**task #3**
+### Task #3
 
 - use the `bind_layers()` function to tell Scapy that the GreHack protocol is on
   top of UDP with source and destination ports equal to 1811

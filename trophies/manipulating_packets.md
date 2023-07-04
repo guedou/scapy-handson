@@ -4,7 +4,7 @@ This trophy gives you the opportunity to perform simple Scapy packets manipulati
 
 ## Tasks
 
-**task #1**
+### Task #1
 
 - create a valid DNS query to `8.8.8.8`
 - display its summary
@@ -13,7 +13,7 @@ This trophy gives you the opportunity to perform simple Scapy packets manipulati
 - access the UDP layer
 - access the layer before the DNS one
 
-**task #2**
+### Task #2
 
 - create an implicit packet that builds 5 explicit packets with 5 different TTL values
 - iterate over these packets

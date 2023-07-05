@@ -1,9 +1,13 @@
 # Intercepting and Modifying Packets
 
 This trophy shows how to use Scapy with NFQUEUE in order to tag and modify
-packets on the fly. It only works on Linux with Python2.
+packets on the fly.
 
+<<<<<<< Updated upstream
 You need to follow the instructions on https://github.com/oremanj/python-netfilterqueue to install finally be able to intall the module with:
+=======
+You need to follow the instructions on https://github.com/oremanj/python-netfilterqueue to finally be able to install the module with:
+>>>>>>> Stashed changes
 
 ```shell
 pip install NetfilterQueue`

@@ -166,10 +166,8 @@ def scapy_callback(packet):
         # Iterate over the received DNS Resource Records
         for dns_an in p[DNS].an:
             # Identify the grehack.fr address and change it to 127.0.0.1
-            print(dns_an.rrname, dns_an.type)
             if dns_an.rrname == b"grehack.fr." and dns_an.type == 1:  # 'A' DNS query
                 dns_an.rdata = b"127.0.0.1"
-                print("bla")
                 break
 
         # Rebuild the packet

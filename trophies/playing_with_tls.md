@@ -12,7 +12,7 @@ This trophy shows you some cool things that you can do.
 - identify a ClientHello or a ServerHello message
 - display the ciphersuites
 
-### Task #
+### Task #2
 
 - use `tcpdump` to sniff all packets on 443/TCP sent to `grehack.fr` and write them to `grehack.fr.pcap`
 - use `curl` to connect to `https://grehack.fr` and use the `SSLKEYLOGFILE` environment variable to dump session keys to `grehack.fr.keys.log`

@@ -9,8 +9,7 @@ This repository contains small exercises (called trophies) that gives you the op
 The following online resources will be useful during this workshop:
 
 - [GitHub repository](https://github.com/secdev/scapy)
-- [Scapy in 0x30 Minutes - GreHack22](https://github.com/guedou/guedou.github.io/blob/master/talks/2022_GreHack/Scapy%20in%200x30%20minutes.ipynb)
-- [Scapy Tutorial](https://guedou.github.io/talks/2019_BHUSA/Scapy.slides.html#/)
+- [Scapy in 0x30 Minutes - GreHack22](https://guedou.github.io/talks/2022_GreHack/Scapy%20in%200x30%20minutes.slides.html#/)
 - [Scapy Turned 18](https://docs.google.com/presentation/d/1OWMumgOdQsoqkT0Bi8mqtqrb4WtM1n83tPcQV4eTdlw/edit?usp=sharing)
 - [Documentation](http://scapy.readthedocs.io/en/latest/)
 

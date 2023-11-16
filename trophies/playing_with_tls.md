@@ -19,6 +19,12 @@ This trophy shows you some cool things that you can do.
 - use `editcap` to merge the two files `grehack.fr.keys.log` and `grehack.fr.pcap` into `grehack.fr.pcapng`
 - import the PCAPng file in Scapy using `rdpcap()` and look for unencrypted strings!
 
+### Task #3
+
+- use `sniff()` to sniff all packets on 443/TCP sent to `www.perdu.com`, `www.scapy.net`, and write them to `test_sessions.pcapng`
+- display the content of the PCAPng using the `sniff()` parameters `offline` and `prn`
+- add the `session=TLSSession` and display it content again, can you spot any useful differences?
+
 ## Hints
 
 - the TAB key can be used to find Scapy layers names!

@@ -22,7 +22,7 @@ This trophy shows you how to implement a new protocol into Scapy.
 
 ### Task #3
 
-- use the `bind_layers()` function to tell Scapy that the GreHack protocol is on
+- use the `bind_layers()` function to tell Scapy that the `GreHack` protocol is on
   top of UDP with source and destination ports equal to 1811
 - check the results of the unit tests
 
